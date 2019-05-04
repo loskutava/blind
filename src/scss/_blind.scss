@@ -1,0 +1,58 @@
+.blind-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  transition: opacity .5s;
+  background: #fff;
+  z-index: 4;
+
+  .blind_disabled & {
+    position: relative;
+  }
+}
+
+.blind-static {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 180px;
+  padding-bottom: 160px;
+  min-height: calc(100vh - 100px);
+  transition: padding-top 0s .5s;
+  z-index: 2;
+
+  .blind_noanimation & {
+    position: relative;
+    transition: none;
+  }
+
+  &.blind-static_nopadding {
+    padding-bottom: 0
+  }
+
+  .blind_disabled & {
+    position: relative;
+  }
+}
+
+.blind-blackout {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0;
+  z-index: 3;
+}
+
+.scrollDisabled {
+  position: fixed;
+  margin-top: 0;// override by JS to use acc to curr $(window).scrollTop()
+  width: 100%;
+}
