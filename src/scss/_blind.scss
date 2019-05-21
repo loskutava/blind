@@ -24,15 +24,6 @@
   transition: padding-top 0s .5s;
   z-index: 2;
 
-  .blind_noanimation & {
-    position: relative;
-    transition: none;
-  }
-
-  &.blind-static_nopadding {
-    padding-bottom: 0
-  }
-
   .blind_disabled & {
     position: relative;
   }
